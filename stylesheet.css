@@ -1,0 +1,229 @@
+/*For mobile*/
+
+@media only screen and (max-width: 768px) {
+  .home-flex{
+    flex-flow: column;
+  }
+  .picture{
+    margin-top:300px;
+  }
+  .about-tile{
+    width:100vw;
+  }
+}
+
+
+
+body{
+  /*background-color: rgb(244, 255, 255);*/
+  /*background-color: rgb(236, 129, 28);*/
+  font-family: 'Roboto', sans-serif;
+  border-radius:0px;
+  /*background-image: url("https://wallpaperaccess.com/full/3637451.jpg");*/
+  /*background-image: url("https://images.unsplash.com/photo-1593827436316-f25fa93a1af1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b3JhbmdlJTIwc3Vuc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  /*background:linear-gradient(45deg, #20da29, #1eff96,#f549ad,#ff158a);*/
+  background:linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 150vh;
+}
+
+/*animations*/
+
+@keyframes partial-pull {
+  from {min-height:5vh;}
+  to {min-height:17vh;}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+
+}
+.menu-bar {
+  /*border: 2px red solid;*/
+  overflow:hidden;
+  margin:0;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+.menu-list{
+  /*border: 2px blue solid;*/
+  margin: 0 ;
+  display: flex;
+  padding: 0;
+}
+.menu-item{
+  display: inline-block;
+  list-style-type: none;
+  cursor:pointer;
+  margin-left:25px;
+}
+
+.menu-item:hover{
+  text-decoration:underline;
+}
+
+.menu-item:first-child{
+  margin-right:auto;
+}
+
+
+/*Logo*/
+
+.logo {
+  text-align: left;
+  float:left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size:50px;
+  transform: rotate(-40deg);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 900px;
+  margin-left:30px;
+  /*this needs to be more dynamic*/
+
+}
+
+.logo:hover{
+  text-decoration: none;
+  cursor: default;
+}
+
+
+/*Home Styling*/
+
+div.home{
+  font-size:calc(25px + 2vmin);
+  display: block;
+  padding-top:10px;
+  height:1000px;
+  color:white;
+}
+
+.home-flex{
+  display:flex;
+  padding-bottom:30px;
+  flex-flow:none;
+}
+
+.home-flex-child{
+  flex: 1;
+  /*border: 2px solid yellow;*/
+  height:90vh;
+}
+
+.home-flex-child:first-child{
+  margin-right:20%;
+}
+
+.title-div{
+  display:block;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:35%;
+  float:left;
+  padding-left:1.5vw;
+}
+
+.title-text{
+  font-weight: bolder;
+  color:white;
+  font-size:120px;
+  
+}
+
+.subtitle-text{
+  font-size:20px;
+  float:right;
+  margin-top:10px;
+}
+
+.picture{
+  width:calc(200px + 30vmin);
+  border-radius:10px;
+  display:block;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:60px;
+  backdrop-filter: blur(10px);
+}
+
+
+/*Cool paralax effect*/
+.portrait{
+  width:45vw;
+  height:80vh;
+  float:right;
+  border-radius:0px;
+  background-image: url("Media/portrait.jpeg");
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  size:cover;
+  cursor:pointer;
+}
+
+
+/*Home about me tile*/
+.about-tile{
+  height:80vh;
+  margin-right:auto;
+  margin-left:1.5vw;
+  background-color: rgba(255, 255, 255, .25);  
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  padding:10px;
+}
+
+.about-text{
+  padding-left:10px;
+  float:right;
+  padding:10px;
+  font-size:calc(1vw + 1vmin);
+}
+
+.about-header{
+  font-weight: bolder;
+  color:white;
+  font-size:calc(4vw + 2vmin);
+  padding-left:1vw;
+  float:left;
+
+}
+
+/*logo grid*/
+
+.icon-grid{
+  display: grid;
+  row-gap:50px;
+  margin-top:50px;
+
+}
+
+.grid-item{
+
+}
+
+.icon{
+  width:100px;
+}
