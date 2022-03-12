@@ -10,6 +10,15 @@
   .about-tile{
     width:100vw;
   }
+  .vl{
+    height:800px;
+  }
+  .projects{
+    flex-flow: column;
+  }
+  .project-info{
+    height:60vh;
+  }
 }
 
 
@@ -30,6 +39,7 @@ body{
   background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 150vh;
+  color:white;
 }
 
 /*animations*/
@@ -80,6 +90,11 @@ body{
   margin-right:auto;
 }
 
+.cv-link{
+  text-decoration:none;
+  color:white;
+}
+
 
 /*Logo*/
 
@@ -110,7 +125,7 @@ body{
 
 /*Home Styling*/
 
-div.home{
+div.home .education .experience .projects{
   font-size:calc(25px + 2vmin);
   display: block;
   padding-top:10px;
@@ -118,16 +133,29 @@ div.home{
   color:white;
 }
 
+.education .experience .projects{
+  font-size:calc(25px + 2vmin);
+  display: none;
+  padding-top:10px;
+  height:1000px;
+  color:white;
+  margin-top:60px;
+}
+
 .home-flex{
   display:flex;
   padding-bottom:30px;
   flex-flow:none;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
 }
+
 
 .home-flex-child{
   flex: 1;
   /*border: 2px solid yellow;*/
   height:90vh;
+  scroll-snap-align: end;
 }
 
 .home-flex-child:first-child{
@@ -166,6 +194,16 @@ div.home{
   backdrop-filter: blur(10px);
 }
 
+.languages{
+  padding:50px;
+  text-align:center;
+}
+
+.languages-primary{
+  font-size:calc(20px + 2vmin);
+  font-weight: bolder;
+}
+
 
 /*Cool paralax effect*/
 .portrait{
@@ -185,7 +223,7 @@ div.home{
 
 /*Home about me tile*/
 .about-tile{
-  height:80vh;
+  height:70vh;
   margin-right:auto;
   margin-left:1.5vw;
   background-color: rgba(255, 255, 255, .25);  
@@ -220,10 +258,170 @@ div.home{
 
 }
 
-.grid-item{
-
+.grid-item:hover{
+  cursor:pointer;
 }
 
 .icon{
   width:100px;
+}
+
+/* Education*/
+
+
+.edu{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.edu-years{
+  font-weight: bolder;
+  font-size:calc(2vw + 2vmin);
+  padding:0;
+}
+
+.edu-name{
+  font-weight: bolder;
+  font-size:calc(3vw + 2vmin);
+  padding:0;
+}
+
+.vl{
+  border-right:5px solid white;
+  color:white;
+  width:50%;
+  height:300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.qual{
+  font-style:italic;
+  font-size:calc(1vw + 2vmin);
+
+}
+
+.education{
+  margin-top:60px;
+}
+
+.paper-title{
+  font-size:calc(1vw + 1vmin);
+  font-weight:bolder;
+  margin-top:30px;
+}
+
+.paper{
+  margin-top:7px;
+}
+
+.cert{
+  font-size:12px;
+}
+
+/*experience*/
+
+.job{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.job-years{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.company{
+  font-style:italic;
+  font-size:calc(1vw + 2vmin);
+}
+
+.role{
+  font-weight: bolder;
+  font-size:calc(3vw + 2vmin);
+  padding:0;
+}
+
+/*projects*/
+
+.projects{
+  display:none;
+  margin-top:30px;
+}
+
+.project-grid{  
+  display: grid;
+  grid-gap: 80px;
+  grid-row-gap:20px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.project-tile{
+  height:30vh;
+  width: 30vh;
+  background-color: rgba(255, 255, 255, .25);  
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align:center;
+  padding:12px;
+}
+
+.project-tile:hover{
+  cursor:pointer;
+}
+
+.project-name{
+  font-weight:bold;
+  font-size:calc(1.8vh + 2vmin);
+  padding-top:15%;
+
+}
+
+.project-date{
+  font-style:italic;
+}
+
+
+
+.project-info{
+  display:none;
+  margin-left:auto;
+  margin-right:auto;
+  width:98%;
+  height:45vh;
+  margin-bottom:30px;
+  background-color: rgba(255, 255, 255, .25);  
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  padding:12px;
+}
+
+.project-info:hover{
+  cursor:pointer;
+}
+
+.project-info-title{
+  font-weight:bold;
+  font-size:calc(2vh + 2vmin);
+  padding-bottom:10px;
+
+}
+
+.project-info-text{
+  font-size:calc(1vh + 2vmin);
+}
+
+.project-link{
+  color:white;
 }

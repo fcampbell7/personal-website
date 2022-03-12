@@ -13,7 +13,7 @@
         <script type="text/javascript" src="fc.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body onload="randomGradient()" id="body">
+    <body onload="homeClick()" id="body">
 
     <!-- Menu Bar -->
     
@@ -25,7 +25,7 @@
             <li class="menu-item" onclick="educationClick()">Education</li>
             <li class="menu-item" onclick="experienceClick()">Experience</li>
             <li class="menu-item"onclick="projectsClick()">Projects</li>
-            <li class="menu-item" onclick="cvClick()">CV</;>
+            <li class="menu-item"><a class="cv-link" href="Documents/cv.pdf" target="_blank">CV</a></li>
         </ul>
     </div>
  
@@ -34,6 +34,7 @@
 
     <!--Content-->
 
+    <!--HOME-->
     <div class="home" id="home">
         <div class="home-flex">
             <div class="home-flex-child">
@@ -44,31 +45,140 @@
             </div>
 
             <div class="home-flex-child">
-                <img src="Media/portrait.jpeg" class="picture" alt="Picture of Finley" id="portrait" data-micron="tada" data-micron-duration=".8">
+                <img src="Media/portrait.jpeg" class="picture" alt="Picture of Finley" id="portrait" onmouseover="imageAnimation()">
             </div>
         </div>
 
+        <div class="languages">
+            <span class="languages-primary">Python &#8226; HTML/CSS/JavaScript &#8226; C#/.NET &#8226; VBA &#8226; Microsoft Access</span><br>
+            <span>Java &#8226; C &#8226; R &#8226; Git &#8226; C++/OpenGL &#8226; UX Design &#8226; Agile & Waterfall methodologies &#8226; Database management &#8226; Unity Game Development &#8226; Node.js &#8226; Askia Design &#8226; Instruction Set Architecture &#8226; Algorithm analysis</span>
+        </div>
 
         <div class="home-flex">
             <div class="home-flex-child">
                 <div class="about-tile">
                         <p class="about-header">About me.</p>
-                        <p class="about-text">According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible. Yellow, black. Yellow, black. Yellow, black. Yellow, black. Ooh, black and yellow! Let's shake it up a little. Barry! Breakfast is ready! Coming! Hang on a second. Hello?</p>
+                        <p class="about-text">I'm a 22 year old Software Developer who is always looking for the next challenge. During my Computer Science studies I loved learning about different technologies and methodologies and trying to find interesting ways to use them. After graduating, this curiosity didn't stop. This website is a portfolio of my various project ideas and attempts, while documenting the process along the way.</p>
                 </div>
             </div>
             <div class="home-flex-child">
                 <div class="icon-grid">
-                    <div class="grid-item"><img class="icon" src="Media/linkedin.png"></div>
-                    <div class="grid-item"><img class="icon" src="Media/github.png"></div>
-                    <div class="grid-item"><img class="icon" src="Media/email.png"></div>
+                    <!--NOTE-->
+                    <!--Need to fix up the alignment of these icons. More centred then horizontal when in mobile?-->
+                    <div class="grid-item"><a href="https://www.linkedin.com/in/finley-campbell-269668193/" target="_blank"><img class="icon" src="Media/linkedin.png"></a></div>
+                    <div class="grid-item"><a href="https://github.com/fcampbell7" target="_blank"><img class="icon" src="Media/github.png"></a></div>
+                    <div class="grid-item"><a href="mailto:fcampbell002@gmail.com"><img class="icon" src="Media/email.png"></a></div>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <!--Education-->
+    <div class="education" id="education">
+        <div class="edu">
+            <div class="edu-years">2018-2020</div>
+            <div class="edu-name">University of Auckland</div>
+            <div class="qual">Bachelor of Science majoring in Computer Science</div>
+            <!--NOTE-->
+            <!--Have click menu to expand to show papers? Doesn't need to be forefront. And give a little more information on course i.e. course title-->
+            <div class="paper-title">Notable Papers</div>
+            <div class="paper"><b>CompSci 320:</b>Applied algorithms</div>
+            <div class="paper"><b>CompSci 335:</b> Functional programming and distributed systems</div>
+            <div class="paper"><b>CompSci 345:</b> Human-computer interaction</div>
+            <div class="cert">Certificate of Outstanding Achievement</div>
+            <div class="paper"><b>CompSci 373:</b> Computer graphics and image processing</div>
+            <div class="cert">Certificate of Outstanding Achievement</div>
+            <div class="paper"><b>CompSci 399:</b> Capstone course</div>
+            <div class="cert">Certificate of Outstanding Achievement</div>
+        </div>
+        <div class="vl"></div>
+        <div class="edu">
+            <div class="edu-years">2011-2017</div>
+            <div class="edu-name">Kristin School</div>
+            <div class="qual">Year 13</div>
+            <div class="qual">International Baccalaureate (IB) Diploma</div>
+            <div class="qual">NCEA Level 1</div>
+        </div>
+    </div>
+
+
+    <!--Experience-->
+    <div class="experience" id="experience">
+        <!-- Add popup to each job which has some more information?-->
+        <div class="job" id = "job1" onclick="jobPopup1()">
+            <div class="job-years">November 2020 - Current</div>
+            <div class="company">CBG Health Research</div>
+            <div class="role">Programmer / Analyst</div>
+        </div>
+        <div class="vl"></div>
+        <div class="job" id = "job2" onclick="jobPopup2()">
+            <div class="job-years">October 2021 - On going</div>
+            <div class="company">MASTERSTROKE - Auckland Hospital</div>
+            <div class="role">Website Development Contract</div>
+        </div>
+        <div class="vl"></div>
+        <div class="job" id = "job3" onclick="jobPopup3()">
+            <div class="job-years">November 2018 - 2020</div>
+            <div class="company">CBG Health Research</div>
+            <div class="role">Part time IT Support & HealthStat Technical Support</div>
+        </div>
+    </div>
+
+
+    <!--Projects-->
+    <div class="projects" id="projects">
+        <div class="project-info" id="projectinfo1" onclick="projectInfoClick()">
+            <div class="project-info-title">Personal Website</div>
+            <div class="project-info-text">The idea behind this website started with me wanting to showcase my projects and have the ability to document my progress and experiences. As I developed the idea, it turned into a personal portfolio website where I could also showcase my skills and experience. The design and look of the website was the most important part. I wanted to create a website which was eye-catching, modern, and sleek.
+                <br><br>I wanted to bolster my design and UX skills, so I used a more formal design process than I normally would for personal projects. There ended up being four iterations of my design process. The <a class="project-link" href="Media/design1.JPG" target="_blank">first iteration</a> was drawn up on a piece of scrap paper during a workshop when the project first came to me. The <a class="project-link" href="Media/design2.JPG" target="_blank">second</a> and <a class="project-link" href="Media/design3.JPG" target="_blank">third</a> were more formal sketches. The <a class="project-link" href="Media/design4.png" target="_blank">final</a> was a prototype made in Figma along with a <a class="project-link" href="Media/plan.JPG" target="_blank">3-step action plan</a>. I found this formal planning process to be very useful and helped me achieve my goal in a more focussed and efficient manner. I am very happy with how it has turned out.
+            </div>
+        </div>
+        <div class="project-info" id="projectinfo2" onclick="projectInfoClick()">
+            <div class="project-info-title">MASTERSTROKE Website</div>
+            <div class="project-info-text">I was given the opportunity to develop and maintain a website for the MASTERSTROKE trial at Auckland Hospital. This was an exciting experience which allowed me to refine my website development and support skills. The design is simple and straight forward to keep the content at the forefront and to allow it to be read easily. This was the my first time implementing a login page properly which uses encryption. There are a few different ongoing plans for the website in the pipeline. You can visit the website <a class="project-link" href="http://www.masterstroke.org.nz" target="_blank">here</a>. </div>
+        </div>
+        <div class="project-info" id="projectinfo3" onclick="projectInfoClick()">
+            <div class="project-info-title">Twitter Bot</div>
+            <div class="project-info-text">During the 2021 Delta outbreak lockdown I got bored and starting coming up with fun ideas with different APIs. I came across the twitter API and thought I could create a bot which tweets something once a day. My girlfriend came up with the idea of a bot which compliments her every day. I thought it would be funny to have a template compliment where one word of the words is random each day. I found a random word generator API and linked that into the Twitter API, and scheduled a script to run once a day to post the tweet. You can check it out <a class="project-link" href="https://twitter.com/EveryCompliment" target="_blank">here</a>.</div>
+        </div>
+        <div class="project-info" id="projectinfo4" onclick="projectInfoClick()">
+            <div class="project-info-title">Unity Game</div>
+            <div class="project-info-text">During my final semester at University I took CompSci 399 where we had to collaborate as a group to create a project. My group decided to develop a video game and post it online for others to play. The game was called "Into the Dark" and was developed in Unity. My main role was the art lead. I created most of the artwork and assets for the game and controlled most of the art direction and design. This was my first experience working on a long term project as a group, and my first experience with Unity. The game took us a full semester to develop. With more time we could've made a longer game, but I am extremely proud of how this turned out. It was the crowning achievement of my degree and had an awesome experience creating it. You can check out the game <a class="project-link" href="https://gamejolt.com/games/intothedark/551446" target="_blank">here</a>.</div>
+        </div>
+        <div class="project-info" id="projectinfo5" onclick="projectInfoClick()">
+            <div class="project-info-title">Github</div>
+            <div class="project-info-text">You can visit my Github page <a class="project-link" href="https://github.com/fcampbell7" target="_blank">here</a>. This is where I put a lot of the code I create for random ideas I have.</div>
+        </div>
+        <div class="project-grid">
+            <!--NOTE-->
+            <!--These tiles are perfect. Need to add on click to expand to give more information on project + display photos-->
+            <div class="project-tile" onclick="projectClick(1)" id="project1" >
+                <div class="project-date">Feb-March 2022</div><br><br>
+                <div class="project-name">Personal Website</div>
+            </div>
+            <div class="project-tile" onclick="projectClick(2)" id="project2">
+                <div class="project-date">October 2021-On going</div><br><br>
+                <div class="project-name">MASTERSTROKE Website</div>
+            </div>
+            <div class="project-tile" onclick="projectClick(3)" id="project3">
+                <div class="project-date">October 2021</div><br><br>
+                <div class="project-name">Twitter Bot</div>
+            </div>
+            <div class="project-tile" onclick="projectClick(4)" id="project4">
+                <div class="project-date">July-October 2020</div><br><br>
+                <div class="project-name">Unity Game</div>
+            </div>
+            <div class="project-tile" onclick="projectClick(5)" id="project5">
+                <div class="project-date"></div><br><br><br>
+                <div class="project-name">Github</div>
+            </div>
+        </div>
+    </div>
          
 
-    </body>
     
 
+
+    </body>
 </html>
